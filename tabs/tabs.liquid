@@ -1,0 +1,15 @@
+<div class="tabs" data-section-settings="{{ section.settings | json }}" data-section-blocks="{{ section.blocks | json }}">
+  <ul class="tabs__navigation">
+    {% for block in section.blocks %}
+      <li class="tabs__item">{{ block.title }}</li>
+    {% endfor %}
+  </ul>
+  
+  <div class="tabs__content">
+    {% for block in section.blocks %}
+      <div class="tabs__pane">
+        {{ block.content }}
+      </div>
+    {% endfor %}
+  </div>
+</div>
